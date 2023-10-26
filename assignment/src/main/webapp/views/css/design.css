@@ -1,0 +1,123 @@
+html, body{
+	color: aliceblue;
+	min-height: 100vh;
+	max-height: max-content;
+}
+
+/* Background of the web */
+.custom-gradient {
+	background: linear-gradient(135deg,rgb(24, 32, 85), rgb(48, 5, 41));
+}
+
+/* Text box shadow when focus*/
+.border-text:focus {
+	box-shadow: 0 0 0 0.1rem rgba(124, 176, 255, 0.596);
+}
+
+/* Effect to left arrow */
+.left-arrow {
+	clip-path: polygon(0% 0%, 25% 0, 30% 50%, 25% 100%, 0% 100%);
+	transition: clip-path 2s 0s;
+}
+
+.left-arrow:hover {
+	clip-path: polygon(0% 0%, 100% 0, 100% 50%, 100% 100%, 0% 100%);
+}
+
+.right-box .right-text-box {
+	clip-path: inset(0 0 0 100%);
+	transition: 0s 1200s;
+}
+
+.right-box:hover .right-text-box {
+	clip-path: inset(0 0 0 0%);
+	transition: 2s;
+}
+
+
+.left-box .left-text-box {
+	clip-path: inset(0 100% 0 0);
+	transition: 0s 1200s;
+}
+
+.left-box:hover .left-text-box {
+	clip-path: inset(0 0 0 0%);
+	transition: 2s;
+}
+
+/* Custom button */
+.button-info {
+	color: aliceblue;
+}
+
+.text{
+	color: aliceblue;
+}
+
+.button-info:hover {
+	background-color: rgba(128,9,9,0.5);
+	color: white;
+}
+
+/* Login container */
+.box-area {
+	width: 930px;
+}
+
+/* Login right part */
+.right-part {
+	padding: 40px 30px 40px 40px;
+}
+
+/* Custom place holder */
+::placeholder {
+	font-size: 16px;
+}
+
+/* Image for home page */
+.img-info {
+	width: 30%;
+}
+
+/*Clip-path img shop item  */
+
+.img-item {
+	clip-path: polygon(30% 0%, 70% 0%, 100% 30%, 100% 70%, 70% 100%, 30% 100%, 0% 70%, 0% 30%);
+	transition: transform 1s, clip-path 1s;
+}
+
+.img-item:hover {
+	clip-path: polygon(30% 0%, 100% 0, 100% 30%, 99% 100%, 70% 100%, 0 100%, 0% 70%, 0 0);
+	transform: scale(1.2);
+}
+
+/* For small screen */
+@media only screen and (max-width:768px) {
+
+	.box-area {
+		margin: 0 10px;
+	}
+
+	.right-part {
+		padding: 20px;
+	}
+
+	.left-arrow {
+		clip-path: polygon(0% 0%, 35% 0, 40% 50%, 35% 100%, 0% 100%);
+		transition: clip-path 2s 0s;
+	}
+
+	.img-info {
+		width: 40%;
+	}
+
+	.right-box .right-text-box {
+		clip-path: inset(0 0 0 100%);
+		transition: 0s 1200s;
+	}
+
+	.left-box .left-text-box {
+		clip-path: inset(0 100% 0 0);
+		transition: 0s 1200s;
+	}
+}
